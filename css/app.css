@@ -1,0 +1,660 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    font-weight: 400;
+    text-transform: initial;
+    font-size: 12px;
+    font-weight: 500;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #F13340;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    width: 100vw;
+    height: 670px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: #f13340 !important;
+    background-position: 50% 50%;
+}
+
+.header:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.header .navcontainer {
+    height: 670px;
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.header .navcontainer .navbar {
+    position: absolute;
+    width: 100%;
+    padding: 0 5%;
+    height: 100px;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header .navcontainer .navbar .left {
+    display: flex;
+    flex: 5;
+    align-items: center;
+}
+
+.header .navcontainer .navbar .left .logo {
+    width: 200px;
+    height: 75px;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.header .navcontainer .navbar .right {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header .navcontainer .navbar .right .download:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.header .navcontainer .navbar .right .download img {
+    width: 196px;
+    height: auto;
+}
+
+.header .navcontainer .textcontainer {
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.header .navcontainer .textcontainer h1 {
+    background: rgba(0, 0, 0, .8);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+.header .navcontainer .textcontainer span {
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-top: 35px;
+    padding: 2%;
+    text-align: center;
+}
+
+.header .navcontainer .imagecontainer {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.header .navcontainer .imagecontainer img {
+    width: auto;
+    height: 400px;
+}
+
+.logo:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.bottom a:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.image.ai.fadeIn.slideanim.slide {
+    width: 100%;
+}
+
+.text-image-container {
+    height: 533px;
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.text-image-container .text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 25px;
+}
+
+.text-image-container .text p {
+    font-size: 14px;
+    color: #6f6f6f;
+    line-height: 1.6;
+}
+
+.text-image-container .image {
+    position: relative;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.text-image-container .ai {
+    margin-bottom: 60px;
+}
+
+.fullwidth {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: #F6F6F6;
+    border-top: 2px solid #DFDFDF;
+    border-bottom: 2px solid #DFDFDF;
+}
+
+.fullwidth .container {
+    height: 605px;
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fullwidth .container .top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.fullwidth .container .top .title {
+    font-size: 2em;
+    font-weight: 300;
+    color: #6f6f6f;
+}
+
+.fullwidth .container .top .pseudobtn {
+    margin-top: 20px;
+    border: 2px solid #faa918;
+    font-size: 1.063em;
+    font-weight: 500;
+    padding: 8px 15px;
+    color: #faa918;
+    border-radius: 8px;
+}
+
+.fullwidth .container .bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+
+.fullwidth .container .bottom .tutor1,
+.fullwidth .container .bottom .tutor2,
+.fullwidth .container .bottom .tutor3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.fullwidth .container .bottom .image,
+.fullwidth .container .bottom .name,
+.fullwidth .container .bottom .descrip {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.fullwidth .container .bottom .image {
+    flex: 1.2;
+}
+
+.fullwidth .container .bottom .name {
+    margin-top: -20px;
+    font-size: 1.25em;
+    font-weight: 700;
+    color: #6f6f6f;
+    text-align: center;
+}
+
+.fullwidth .container .bottom .descrip {
+    margin-top: -70px;
+    font-size: 1.063em;
+    font-weight: 300;
+    line-height: 25.5px;
+    color: #6f6f6f;
+    width: 60%;
+    text-align: center;
+}
+
+.footer {
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+}
+
+.footer .container {
+    height: 450px;
+}
+
+.footer .container .top {
+    display: flex;
+}
+
+.footer .container .top .title {
+    margin-bottom: 20px;
+    margin-top: -64px;
+}
+
+.download2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footer .container .top .download img {
+    width: 196px;
+    height: auto;
+}
+
+.footer .container .top .download:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.footer .container .top p {
+    width: 40%;
+    font-size: 1.063em;
+    font-weight: 300;
+    color: #999;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer .container .bottom {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    font-size: 48px;
+}
+
+.footer .container .bottom a {
+    font-size: 1.063em;
+    font-weight: 600;
+    color: #f13340;
+}
+
+.footer .container .bottom a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 495px) {
+    .header {
+        height: auto;
+    }
+
+    .header .navcontainer .textcontainer {
+        top: 20%;
+        width: 100%;
+        left: 0;
+    }
+
+    .header .navcontainer .navbar .right .download img {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer .container .top .download img {
+        width: 100%;
+        height: auto;
+    }
+
+    .header .navcontainer .imagecontainer img {
+        width: auto;
+        height: 350px;
+    }
+
+    .footer>.container p {
+        font-size: 12px;
+    }
+
+    .footer .container {
+        height: 314px;
+    }
+
+    .fullwidth .container .top .title {
+        font-size: 12px;
+    }
+
+    .header .navcontainer .textcontainer h1 {
+        font-size: 2em;
+    }
+
+    .header .navcontainer .textcontainer h3 {
+        font-size: 1em;
+    }
+
+    .header .navcontainer .imagecontainer {
+        width: auto;
+    }
+
+    .header .navcontainer .navbar {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .header .navcontainer .navbar .download {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (min-width: 496px) and (max-width: 563px) {
+    .header {
+        height: 600px;
+    }
+
+    .header .navcontainer .textcontainer {
+        top: 25%;
+    }
+
+    .header .navcontainer .textcontainer h1 {
+        font-size: 2.5em;
+    }
+
+    .header .navcontainer .textcontainer h3 {
+        font-size: 1.2em;
+    }
+
+    .header .navcontainer .imagecontainer {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 564px) and (max-width: 955px) {
+    .header .navcontainer .textcontainer {
+        top: 12%;
+    }
+
+    .header .navcontainer .textcontainer h1 {
+        font-size: 2.5em;
+    }
+
+    .header .navcontainer .textcontainer h3 {
+        font-size: 1.3em;
+    }
+
+    .header .navcontainer .imagecontainer {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 319px) {
+    .text-image-container {
+        height: auto;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    .text-image-container .text h2 {
+        width: 100%;
+    }
+
+    .text-image-container .text p {
+        width: 100%;
+    }
+
+    .text-image-container .image {
+        align-self: center;
+        margin-top: 40px;
+    }
+
+    .text-image-container .image img {
+        width: auto;
+        height: 350px;
+    }
+
+    .text-image-container .ai {
+        order: 2;
+    }
+
+    .text-image-container .ai img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 563px) {
+    .text-image-container {
+        height: auto;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    .text-image-container .text h2 {
+        width: 100%;
+    }
+
+    .text-image-container .text p {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .text-image-container .image {
+        align-self: center;
+        margin-top: 40px;
+    }
+
+    .text-image-container .image img {
+        width: auto;
+        height: 350px;
+    }
+
+    .text-image-container .ai {
+        order: 2;
+    }
+
+    .text-image-container .ai img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 564px) and (max-width: 955px) {
+    .text-image-container {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .text-image-container .image {
+        align-self: center;
+        margin-top: 40px;
+    }
+
+    .text-image-container .ai {
+        order: 2;
+    }
+}
+
+@media screen and (min-width: 956px) and (max-width: 1111px) {
+    .text-image-container {
+        width: 90%;
+        margin: 0 10%;
+    }
+}
+
+@media screen and (max-width: 563px) {
+    .tutors-full {
+        height: 720px;
+        padding: 0 4%;
+    }
+
+    .tutors-full .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .tutors-full .container .top .title {
+        text-align: center;
+    }
+
+    .tutors-full .container .bottom .descrip {
+        margin-top: 25px;
+    }
+}
+
+@media screen and (min-width: 564px) and (max-width: 955px) {
+    .tutors-full {
+        height: 720px;
+    }
+
+    .tutors-full .container .top .title {
+        text-align: center;
+    }
+
+    .tutors-full .container .bottom .descrip {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 956px) and (max-width: 1111px) {
+    .tutors-full {
+        height: 720px;
+    }
+
+    .tutors-full .container .bottom .descrip {
+        margin-top: -70px;
+    }
+}
+
+@media screen and (max-width: 462px) {
+    .footer .container .top p {
+        width: 80%;
+    }
+
+    .footer .container .bottom {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer .container .bottom a {
+        font-size: 32px;
+        line-height: 35px;
+    }
+}
+
+@media screen and (min-width: 463px) and (max-width: 756px) {
+    .footer .container .bottom {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 757px) and (max-width: 955px) {
+    .footer .container {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/*Float Panel*/
+.slideanim {
+    visibility: hidden;
+    visibility: visible\9;
+    /*For old IE browsers IE6-8 */
+}
+
+.slideanim.slide {
+    visibility: visible;
+    animation: slide 1s;
+}
+
+.slideanim::after {
+    /* useful when its child elements are float:left; */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
